@@ -1,0 +1,264 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Webkit-based browsers (Chrome, Safari) */
+}
+
+html {
+  overflow: -moz-scrollbars-none; /* For Firefox */
+  scrollbar-width: none; /* For Firefox */
+}
+
+
+.app {
+  text-align: center;
+}
+
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  position: relative;
+  z-index: 10; /* Ensure the text is above the video */
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  /* transition: transform 0.2s ease-in-out; */
+
+  /* transition: transform 0.1s ease-out, opacity 0.3s ease-out; */
+  will-change: transform, opacity;
+}
+
+/* Optional: Adjust the canvas size to fill the screen */
+#video-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Ensure no interaction with the video canvas */
+}
+
+/* Styling for the heading */
+.header h1 {
+  margin-bottom: 5px;
+  font-size: 60px;
+  font-weight: bold;
+  /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); */
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Styling for the paragraph */
+.header p {
+  font-size: 1.25rem;
+  font-weight: normal;
+  /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); */
+  margin-top: 0rem;
+  z-index: 1;
+  
+
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Optional: Add a subtle overlay to enhance text readability */
+
+.product-card {
+  
+  cursor: pointer;
+  width: 200px;
+  margin: 5px;
+  /* background: linear-gradient(145deg, #212121, #1a1a1a); */
+  border-radius: 10px;
+  /* color: #fff; */
+  /* height: 370px; */
+  
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image,
+.product-image-hover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.product-image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.image-container:hover .product-image-hover {
+  opacity: 1;
+}
+
+.image-container:hover .product-image {
+  opacity: 0;
+}
+
+/* Product Info Section */
+.product-info {
+height: 50%;
+  border-radius: 5px;
+  /* margin-top: -10px; */
+  /* padding: 20px; */
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #ccd2d8;
+  color: #222222;
+  width: 100%;
+  /* background: red; */
+  text-align: center;
+  /* z-index: 10000; */
+}
+
+.price-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.product-title {
+  font-weight: 500;
+  
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-description {
+  color: #333333;
+  font-size: 14px;
+  margin: 10px 0;
+   
+}
+
+.product-features {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.product-features li {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  
+  /* position:absolute; */
+  /* bottom:0px; */
+  /* left:0px; */
+  /* right:0px; */
+  width: 80%;
+  /* background-color: #85a4b4; */
+  background: linear-gradient(135deg,rgb(177, 191, 197) 0%, #298096 100%);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+
+  
+  /* border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px auto 0;
+  cursor: pointer;
+  transition: background 0.3s ease; */
+}
+
+.add-to-cart:hover {
+  background: #0056b3;
+}
+
+
+.footer {
+  background: #0f1b33;
+  padding: 1rem;
+  text-align: center;
+  color: #4db8ff;
+  font-size: 0.9rem;
+}
+
+
+/* .scroll-effects {
+  position: relative;
+  overflow: hidden;
+} */
+
+/* .scroll-effects::before,
+.scroll-effects::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: linear-gradient(145deg, #1a2a4f, #0f1b33);
+  transform: rotate(45deg);
+  top: -50%;
+  left: -50%;
+  z-index: 1;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: scroll-effect 10s linear infinite;
+} */
+
+@keyframes scroll-effect {
+  from {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  to {
+    transform: translate(50%, 50%) rotate(45deg);
+  }
+}
